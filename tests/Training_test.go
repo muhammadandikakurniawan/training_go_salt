@@ -14,10 +14,14 @@ func TestFibonacci(t *testing.T) {
 	}
 }
 
-func BenchmarkFibonacci(t *testing.B) {
-	res, _ := packages.Fibonacci(6)
+func BenchmarkFibonacci(b *testing.B) {
 
-	if res != 5 {
-		t.Error("salah")
+	for i := 0; i < b.N; i++ {
+		res, _ := packages.Fibonacci(6)
+
+		if res != 5 {
+			b.Error("salah")
+		}
 	}
+
 }
