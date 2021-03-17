@@ -8,11 +8,14 @@ import (
 )
 
 func TestPushStack(t *testing.T) {
-	node := packages.NewStack(10)
+	node := packages.NewStack()
 
+	node.Push(10)
 	node.Push(30)
 	node.Push(50)
 	node.Push(70)
+
+	node.Print()
 
 	popres := node.Pop()
 	popres1 := node.Pop()
@@ -25,3 +28,24 @@ func TestPushStack(t *testing.T) {
 	fmt.Print(popres3)
 	fmt.Print(node)
 }
+
+// func TestPushStack(t *testing.T) {
+// 	node := packages.NewStack(10)
+
+// 	node.Push(30)
+// 	node.Push(50)
+// 	node.Push(70)
+
+// 	node.Print()
+
+// 	// popres := node.Pop()
+// 	// popres1 := node.Pop()
+// 	// popres2 := node.Pop()
+// 	// popres3 := node.Pop()
+
+// 	// fmt.Print(popres)
+// 	// fmt.Print(popres1)
+// 	// fmt.Print(popres2)
+// 	// fmt.Print(popres3)
+// 	fmt.Print(node)
+// }

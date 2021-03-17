@@ -8,31 +8,16 @@ import (
 )
 
 func TestAddRight(t *testing.T) {
-	node := packages.NewBinaryTree(10)
+	node := &packages.BinaryTree{}
 
-	node.AddRight(30)
-	node.AddRight(50)
-	node.AddRight(70)
+	node.Insert(32)
+	node.Insert(15)
+	node.Insert(10)
+	node.Insert(23)
+	node.Insert(64)
+	node.Insert(43)
+	node.Insert(74)
 
-	fmt.Print(node)
-}
-
-func TestLeft(t *testing.T) {
-	node := packages.NewBinaryTree(10)
-
-	node.AddLeft(30)
-	node.AddLeft(50)
-	node.AddLeft(70)
-
-	fmt.Print(node)
-}
-
-func TestPrint(t *testing.T) {
-	node := packages.NewBinaryTree(10)
-
-	node.AddLeft(30)
-	node.AddLeft(50)
-	node.AddLeft(70)
-
+	node.Print()
 	fmt.Print(node)
 }
